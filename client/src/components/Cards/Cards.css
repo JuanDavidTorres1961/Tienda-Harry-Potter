@@ -1,0 +1,68 @@
+/* Cards.css */
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-size: cover;
+    padding: 20px;
+  }
+  
+  .book {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.226);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .book:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-cover {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .book-info {
+    margin-top: 10px;
+  }
+  
+  .book-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .book-price {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .book-stock {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add any other styles as needed */
+  
+  

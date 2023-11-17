@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "portada": "../images/azkaban.webp"
+  },
+  {
+    "id": 2,
+    "portada": "../images/calizFuego.jpeg"
+  },
+  {
+    "id": 3,
+    "portada": "../images/fenix.jpeg"
+  },
+  {
+    "id": 4,
+    "portada": "../images/legado.jpeg"
+  },
+  {
+    "id": 5,
+    "portada": "../images/misterioPrincipe.webp"
+  },
+  {
+    "id": 6,
+    "portada": "../images/PiedraFilosofal.jpeg"
+  },
+  {
+    "id": 7,
+    "portada": "../images/reliquias.webp"
+  },
+  {
+    "id": 8,
+    "portada": "../images/CamaraSecreta.webp"
+  }
+]
