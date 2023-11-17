@@ -13,7 +13,7 @@ export const Modal = ({
 
   const [bookQuantities, setBookQuantities] = useState(
     cart.reduce((quantities, book) => {
-      quantities[book.id] = 1; // Inicializar con 1 libro por defecto
+      quantities[book.id] = 1;
       return quantities;
     }, {})
   );
@@ -44,7 +44,7 @@ export const Modal = ({
     <section className="modal">
       <div className="modal-content">
         <button onClick={onClose}>X</button>
-        <h1>MODAL CONTENT</h1>
+        <h1>CARRITO DE COMPRAS</h1>
         {cart.map((book) => (
           <div key={book.id}>
             <button onClick={() => handleRemoveBook(book)}>
