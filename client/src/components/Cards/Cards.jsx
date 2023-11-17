@@ -3,7 +3,22 @@ import "./Cards.css";
 
 export const Cards = ({ handleAddCart, books, portadas }) => {
   const handleAddToCart = (bookId) => {
-    handleAddCart(bookId);
+
+    const bookToAdd = books.find((book) => book.id === bookId);
+    if (bookToAdd && bookToAdd.stock > 0) {
+      handleAddCart(bookId);
+
+      const updatedBooks = books.map((book) => {
+        if (book.id === bookId) {
+          return { ...book, stock: book.stock - 1 };
+        } else {
+          return book;
+        }
+      });
+      setBooks(updatedBooks);
+    } else {
+      alert("The book is out of stock");
+    }
   };
 
   return (
@@ -25,11 +40,7 @@ export const Cards = ({ handleAddCart, books, portadas }) => {
             {book.stock ? (
               <div>
                 <p className="book-stock">STOCK {book.stock}</p>
-                <button
-                  onClick={() => {
-                    handleAddToCart(book.id);
-                  }}
-                >
+                <button onClick={() => handleAddToCart(book.id)}>
                   AÑADIR AL CARRITO
                 </button>
               </div>

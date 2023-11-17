@@ -31,7 +31,7 @@ export const Cart = () => {
         console.warn("Book not found with ID:", Id);
       }
     } else {
-      alert("The book has already been added to the cart");
+      alert("Ya Se Agregó Este Libro Al Carrito");
     }
   };
 

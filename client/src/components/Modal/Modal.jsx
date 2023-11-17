@@ -9,8 +9,6 @@ export const Modal = ({
   setCount,
   count,
 }) => {
-  const totalPrice = cart.reduce((total, book) => total + book.price, 0);
-
   const [bookQuantities, setBookQuantities] = useState(
     cart.reduce((quantities, book) => {
       quantities[book.id] = 1;
@@ -45,6 +43,7 @@ export const Modal = ({
       <div className="modal-content">
         <button onClick={onClose}>X</button>
         <h1>CARRITO DE COMPRAS</h1>
+
         {cart.map((book) => (
           <div key={book.id}>
             <button onClick={() => handleRemoveBook(book)}>
@@ -57,10 +56,13 @@ export const Modal = ({
             <button onClick={() => handleDecrement(book)}>▼</button>
           </div>
         ))}
+
         {cart.length ? (
           <div>
             <button onClick={handleCleanCart}>Limpiar Carrito</button>
-            <p>TOTAL: {totalPrice}</p>
+            <p>TOTAL: {
+              cart.reduce((total, book) => total + book.price * bookQuantities[book.id], 0)
+            }</p>
           </div>
         ) : (
           <h1>Carrito vacío</h1>
@@ -69,3 +71,4 @@ export const Modal = ({
     </section>
   );
 };
+
